@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamentos - Site + Mural</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ULTRA LUXO PREMIUM — Preto profundo + Dourado intenso + Branco */
+    :root{
+      --gold: #e4c567;
+      --gold-strong: #d4af37;
+      --black: #050505;
+      --card-bg: #0b0b0b;
+      --muted-white: #ebebeb;
+    }
+    html,body{height:100%;}
+    body {
+      background: linear-gradient(180deg,#000 0%, #070707 100%);
+      color: var(--muted-white);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      line-height: 1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding-bottom:80px;
+    }
+
+    /* Header */
+    .topbar{
+      border-bottom:1px solid rgba(228,197,103,0.08);
+      padding:18px 0;
+    }
+    .brand {
+      display:flex;align-items:center;gap:14px;
+    }
+    .brand .logo-circle{
+      width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--gold) 0%, #b89b3a 100%);display:flex;align-items:center;justify-content:center;color:#000;font-weight:700;font-family:'Playfair Display',serif;font-size:20px;box-shadow:0 6px 18px rgba(212,175,55,0.15);
+    }
+    .brand h6{margin:0;font-family:'Playfair Display',serif;color:var(--gold);letter-spacing:0.6px;font-size:1rem}
+    .brand p{margin:0;font-size:0.85rem;color:#cfcfcf}
+
+    .hero{
+      text-align:center;margin:28px 0 10px 0;
+    }
+    h1{font-family:'Playfair Display',serif;font-size:2.4rem;margin-bottom:6px;color:var(--gold);}
+    .sub{color:var(--gold-strong);font-weight:600}
+
+    /* Cards */
+    .card{background:var(--card-bg);border:1px solid rgba(228,197,103,0.18);border-radius:14px;padding:0;overflow:hidden}
+    .card-header{background:transparent;border-bottom:none;padding:18px 24px}
+    .card-header h3{margin:0;font-family:'Playfair Display',serif;color:var(--gold);font-size:1.25rem}
+    .card-body{padding:1.6rem 2rem;color:var(--muted-white)}
+
+    .price{font-size:1.4rem;font-weight:700;color:#fff}
+    .pkg-meta{color:#dcdcdc;font-size:0.98rem}
+
+    ul{padding-left:1.15rem}
+    ul li{margin-bottom:8px;color:#e9e9e9}
+
+    /* gold accent icon */
+    .gold-dot{width:10px;height:10px;background:var(--gold);border-radius:50%;display:inline-block;margin-right:8px;box-shadow:0 0 8px rgba(212,175,55,0.15)}
+
+    /* divider */
+    .gold-divider{height:3px;background:linear-gradient(90deg,transparent, var(--gold), transparent);border-radius:2px;margin:30px 0}
+
+    /* Detalhamento tecnico */
+    .detalhe-tecnico{max-width:980px;margin:40px auto 80px;}
+    .detalhe-tecnico h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:2rem;margin-bottom:8px}
+    .detalhe-tecnico .lead{color:#dcdcdc;font-size:1.05rem;margin-bottom:18px}
+    .detalhe-tecnico .card{border-radius:10px}
+    .detalhe-tecnico h4{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.25rem;margin-bottom:10px}
+    .detalhe-tecnico p, .detalhe-tecnico li{color:#efefef;font-size:1.05rem}
+
+    /* footer */
+    footer{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(8,8,8,0.9));padding:14px 18px;border-top:1px solid rgba(228,197,103,0.06);}
+    .signature{color:#dcdcdc;font-size:0.95rem}
+    .signature strong{color:var(--gold)}
+
+    /* responsive tweaks */
+    @media (max-width:767px){
+      h1{font-size:1.6rem}
+      .card-body{padding:1rem}
+      .brand .logo-circle{width:44px;height:44px;font-size:18px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container topbar">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="brand">
+        <div class="logo-circle">WM</div>
+        <div>
+          <h6>William Mesquita</h6>
+          <p>Engº de Computação — Orçamento Nº 724</p>
+        </div>
+      </div>
+      <div class="text-end">
+        <a href="https://neoscienzatechnology-lgtm.github.io/portfolio/" target="_blank" class="text-decoration-none" style="color:var(--gold);font-weight:600">Meu Portfólio</a>
+        <div style="font-size:0.85rem;color:#bfbfbf;margin-top:6px">Data: 19/11/2025</div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Orçamentos de Desenvolvimento</h1>
+      <div class="sub">Proposta profissional — Website + Mural Familiar + Sistema de Interações</div>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h3>Pacote Simples</h3>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <div class="price">R$ 2.900,00</div>
+                <div class="pkg-meta">Essencial e eficiente</div>
+              </div>
+              <div class="text-end"><span class="gold-dot"></span></div>
+            </div>
+
+            <ul>
+              <li>Website com 4 páginas</li>
+              <li>Layout responsivo com Bootstrap</li>
+              <li>Formulário de contato por e-mail</li>
+              <li>Mural familiar básico (mensagens de texto)</li>
+              <li>Registro de cliques básicos + exportação CSV</li>
+            </ul>
+
+            <p class="mt-3"><strong>Prazo:</strong> 10 dias úteis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h3>Pacote Profissional</h3>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <div class="price">R$ 5.900,00</div>
+                <div class="pkg-meta">Completo e balanceado</div>
+              </div>
+              <div class="text-end"><span class="gold-dot"></span></div>
+            </div>
+
+            <ul>
+              <li>Design moderno e otimizado (preto, dourado e branco)</li>
+              <li>SEO básico e otimização de carregamento</li>
+              <li>Mural familiar completo (fotos + mensagens)</li>
+              <li>Rastreamento de interações detalhado</li>
+              <li>Painel interno com gráficos</li>
+            </ul>
+
+            <p class="mt-3"><strong>Prazo:</strong> 15 dias úteis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <h3>Pacote Deluxe</h3>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <div class="price">R$ 9.500,00</div>
+                <div class="pkg-meta">Premium — máxima profissionalização</div>
+              </div>
+              <div class="text-end"><span class="gold-dot"></span></div>
+            </div>
+
+            <ul>
+              <li>Design premium com animações e microinterações</li>
+              <li>Mural avançado (vídeos curtos, notificações)</li>
+              <li>Heatmap e dashboard avançado</li>
+              <li>Hospedagem configurada + backups</li>
+              <li>Suporte por 60 dias</li>
+            </ul>
+
+            <p class="mt-3"><strong>Prazo:</strong> 20–25 dias úteis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <section class="mt-4">
+      <div class="card">
+        <div class="card-header">
+          <h3>Forma de Pagamento — Infinity Pay (detalhes)</h3>
+        </div>
+        <div class="card-body">
+          <p>Utilizamos <strong>Infinity Pay</strong> como gateway. Opções: cartão, PIX ou boleto. Parcelamento até 12x conforme regras do gateway.</p>
+          <h5 style="color:var(--gold)">Opções recomendadas</h5>
+          <ol>
+            <li>Pagamento à vista — 5% de desconto via PIX.</li>
+            <li>Entrada + parcelamento — 50% de entrada + parcelamento do saldo em até 6x.</li>
+            <li>Parcelamento — até 12x no cartão (mediante análise).</li>
+          </ol>
+          <p class="pkg-meta">Taxas de processamento da Infinity Pay serão repassadas conforme contrato do gateway.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="detalhe-tecnico container">
+    <h2 class="text-center">📘 Detalhamento Técnico (Opcional)</h2>
+    <p class="lead text-center">Explicações simples para clientes leigos — o objetivo é tornar técnico em algo compreensível.</p>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h4>1. Arquitetura do Sistema</h4>
+        <ul>
+          <li><strong>Frontend (HTML5, CSS3, Bootstrap):</strong> parte visual do site, garante responsividade em celulares e computadores.</li>
+          <li><strong>JavaScript modular:</strong> adiciona interatividade, animações e melhora a experiência do usuário.</li>
+          <li><strong>Backend (PHP/Node.js):</strong> roda no servidor e gerencia logs, mensagens e autenticação.</li>
+          <li><strong>Banco de dados:</strong> armazenamento seguro de cadastros, mensagens e arquivos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h4>2. Segurança e Proteção de Dados</h4>
+        <ul>
+          <li><strong>HTTPS:</strong> protege a comunicação entre usuário e site.</li>
+          <li><strong>Senha criptografada (bcrypt):</strong> impede que senhas sejam lidas mesmo em caso de vazamento.</li>
+          <li><strong>Controle de acesso:</strong> níveis para administradores e familiares.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h4>3. Mural da Família</h4>
+        <ul>
+          <li>Envio de mensagens e fotos com validação e limites de tamanho.</li>
+          <li>Área administrativa para aprovar e gerenciar conteúdo.</li>
+          <li>Notificações por e-mail (opcional).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h4>4. Hospedagem e Backups</h4>
+        <ul>
+          <li>Hostinger Business ou VPS recomendados para performance e segurança.</li>
+          <li>Backups automáticos diários (pacote Deluxe inclui retenção estendida).</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="text-center">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="signature">Redigido por <strong>William Mesquita</strong> — Engº de Computação</div>
+      <div style="text-align:right;color:#cfcfcf">Orçamento Nº 724</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
